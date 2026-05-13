@@ -2,23 +2,23 @@ package com.api;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+import java.time.Duration;
 
 public class Main {
     public static void main(String[] args) {
 
         WebDriver driver =new ChromeDriver();
-        WebDriver driverf =new FirefoxDriver();
-        WebDriver driveredge =new EdgeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.get("https://rahulshettyacademy.com/locatorspractice/");
+        driver.manage().window().maximize();
+        System.out.println(driver.getTitle());
 
-//        driver.get("https://rahulshettyacademy.com/");
-//        System.out.println(driver.getTitle());
-//
-//        driverf.get("https://rahulshettyacademy.com/");
-//        System.out.println(driverf.getTitle());
 
-        driverf.get("https://rahulshettyacademy.com/");
-        System.out.println(driverf.getTitle());
+
+
+
+
     }
 }
